@@ -18,4 +18,7 @@ RUN apk update && apk upgrade \
 WORKDIR /data
 
 # Define default command.
-CMD ["bower", "--allow-root", "--config.interactive=false", "install"]
+ENTRYPOINT ["bower", "--allow-root", "--config.interactive=false"]
+
+# Default param
+CMD ["install"]
